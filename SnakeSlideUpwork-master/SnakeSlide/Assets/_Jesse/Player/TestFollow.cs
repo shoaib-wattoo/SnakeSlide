@@ -8,7 +8,7 @@ public class TestFollow : MonoBehaviour
     int index;
     Transform parent;
     Transformation wayPoint;
-
+    public float followingSpeed;
     [Range(1, 20)]
     public int framesPerRetrieval;
 
@@ -26,7 +26,7 @@ public class TestFollow : MonoBehaviour
         // Spawn piece
         this.index = index;
         this.parent = parent;
-        separation = (index == 0) ? separation * 1.4f : separation;
+        separation = (index == 0) ? separation * 0.8f : separation;
         transform.rotation = spawnPosition.rotation;
         transform.position = spawnPosition.position - (spawnPosition.up * separation);
 
@@ -39,10 +39,15 @@ public class TestFollow : MonoBehaviour
         //2a.Go directly
         foreach (var t in TransformationBuffer._instance._transformations)
         {
-            if (Mathf.Abs(t.position.x - transform.position.x) <= 0.2f && Mathf.Abs(t.position.y - transform.position.y) <= 0.2f)
+            if (Mathf.Abs(t.position.x - transform.position.x) <= 0.1f && Mathf.Abs(t.position.y - transform.position.y) <= 0.1f)
             {
-                transform.position = new Vector3(t.position.x, transform.position.y, transform.position.z);
-                transform.rotation = t.rotation;
+
+               
+             Vector3   temp = new Vector3(t.position.x, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(temp, transform.position, Time.deltaTime * followingSpeed);
+                Quaternion temp2= t.rotation;
+                transform.rotation = Quaternion.Lerp(temp2, transform.rotation, Time.deltaTime * followingSpeed);
+              //  transform.rotation = t.rotation;
             }
         }
 
