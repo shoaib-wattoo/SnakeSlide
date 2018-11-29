@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     public bool audioPreferences = true;
 
     public AudioClip grabGemClip;
-    public AudioClip grabPointClip;
+    public AudioClip[] grabPointClip;
     public AudioClip hitWallClip;
 
     AudioSource _audioSource;
@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour
     public void PlayPointSound()
     {
         if (audioPreferences)
-        _audioSource.PlayOneShot(grabPointClip);
+        _audioSource.PlayOneShot(grabPointClip[Random.Range(1,3)]);
     }
 
     public void PlayDieSound()

@@ -727,9 +727,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 3bd2066f-29eb-4507-a8df-33fa8b1957f2
+  projectName: SnakeSlide
+  organizationId: moaazafzal1111
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

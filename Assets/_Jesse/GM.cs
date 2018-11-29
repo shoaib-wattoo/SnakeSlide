@@ -54,7 +54,7 @@ public class GM : MonoBehaviour
                         PlayerPrefs.SetInt("restart", 0);
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 
-                        Debug.Log("khtm");
+                       
                         break;
                     }
 
@@ -206,7 +206,7 @@ public class GM : MonoBehaviour
       //  if (PlayerPrefs.GetInt("mode") == 2) 
       if(mode.selectedMod==2)
         {
-            Debug.Log("nana");
+           
             arcadeMode[0].SetActive(true);
             arcadeMode[1].SetActive(true);
             arcadeMode[2].SetActive(false);
@@ -222,7 +222,7 @@ public class GM : MonoBehaviour
             Storymode[1].SetActive(true);
             Storymode[2].SetActive(false);
             Storymode[3].SetActive(false);
-            Debug.Log("story");
+           
         }
     }
     #endregion

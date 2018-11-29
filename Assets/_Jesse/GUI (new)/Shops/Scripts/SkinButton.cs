@@ -18,6 +18,7 @@ public class SkinButton : MonoBehaviour {
                 //keep as button
                 break;
             case 1: // purchased
+
                 ChangeToToggle();
                 break;
         }
