@@ -9,23 +9,30 @@ public class setFalse : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        if(PlayerPrefs.GetInt("firsttime")>0)
+        {
+            gameObject.SetActive(false);
+        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        try
+        if (PlayerPrefs.GetInt("firsttime") == 0)
         {
-            if (GameObject.FindGameObjectWithTag("Player").transform.position.y > 40f)
+            try
             {
-                this.gameObject.SetActive(false);
+                if (GameObject.FindGameObjectWithTag("Player").transform.position.y > 40f)
+                {
+                    this.gameObject.SetActive(false);
+                }
+
             }
+            catch (NullReferenceException)
+            {
 
-        }
-        catch (NullReferenceException)
-        {
-
+            }
         }
     }
 }

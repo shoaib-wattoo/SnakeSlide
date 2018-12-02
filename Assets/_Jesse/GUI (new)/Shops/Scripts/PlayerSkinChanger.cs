@@ -24,7 +24,11 @@ public class PlayerSkinChanger : MonoBehaviour {
         , _8
         , _9
         , _10
-        , _11;
+        , _11
+        , _12
+        , _13
+        , _14
+        , _15;
 
     public void Refresh() {
         if (GetComponent<SpriteRenderer>() != null) {
@@ -65,6 +69,18 @@ public class PlayerSkinChanger : MonoBehaviour {
                 case 11:
                     GetComponent<SpriteRenderer>().sprite = _11;
                     break;
+                case 12:
+                    GetComponent<SpriteRenderer>().sprite = _12;
+                    break;
+                case 13:
+                    GetComponent<SpriteRenderer>().sprite = _12;
+                    break;
+                case 14:
+                    GetComponent<SpriteRenderer>().sprite = _14;
+                    break;
+                case 15:
+                    GetComponent<SpriteRenderer>().sprite = _15;
+                    break;
             }
         } else if (GetComponent<Image>() != null) {
             switch (PlayerPrefs.GetInt("CurrentSkin" + type)) {
@@ -104,6 +120,19 @@ public class PlayerSkinChanger : MonoBehaviour {
                 case 11:
                     GetComponent<Image>().sprite = _11;
                     break;
+                case 12:
+                    GetComponent<Image>().sprite = _12;
+                    break;
+                case 13:
+                    GetComponent<Image>().sprite = _13;
+                    break;
+                case 14:
+                    GetComponent<Image>().sprite = _14;
+                    break;
+                case 15:
+                    GetComponent<Image>().sprite = _15;
+                    break;
+
             }
         }
     }

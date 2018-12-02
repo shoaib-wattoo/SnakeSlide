@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followingSpeed: 0.5
   framesPerRetrieval: 15
-  separation: 0.9
+  separation: 0.4
   positionAlignSpeed: 7.92
   rotationAlignSpeed: 10
 --- !u!114 &114974734398909266

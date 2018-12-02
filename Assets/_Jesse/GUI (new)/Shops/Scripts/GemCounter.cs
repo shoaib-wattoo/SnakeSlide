@@ -33,7 +33,8 @@ public class GemCounter : MonoBehaviour {
 
     public void Refresh(int price) {
         currScore = PlayerPrefs.GetInt("Gems");
-        PlayerPrefs.SetInt("Gems", currScore - price);
+       // PlayerPrefs.SetInt("Gems", 10000);
+        PlayerPrefs.SetInt("Gems", currScore + price);
         targScore = currScore - price;
         startAdding = true;
         anim.SetTrigger("Add");

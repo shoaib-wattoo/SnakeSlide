@@ -58,8 +58,13 @@ public class Spawner : MonoBehaviour
         SetSkin(PrefabHardA, skin);
         SetSkin(PrefabHardC, skin);
         SetSkin(PrefabHardB, skin);
+        try {
+            startWall.sprite = skin.GetAppropriateSprite(startWall.sprite.name);
+        }
+        catch(MissingReferenceException)
+        {
 
-        startWall.sprite = skin.GetAppropriateSprite(startWall.sprite.name);
+        }
     }
 
     private void SetSkin(GameObject prefab, WallSkinHolder s) {

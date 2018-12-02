@@ -21,11 +21,12 @@ public class TestFollow : MonoBehaviour
     [Range(0.01f, 10f)]
     public float rotationAlignSpeed;
 
-    public void Setup(int index, Transformation spawnPosition, Transform parent)
+    public void Setup(int index, Transformation spawnPosition, Transform parent,float sep)
     {
         // Spawn piece
         this.index = index;
         this.parent = parent;
+        separation = sep;
         separation = (index == 0) ? separation * 0.8f : separation;
         transform.rotation = spawnPosition.rotation;
         transform.position = spawnPosition.position - (spawnPosition.up * separation);

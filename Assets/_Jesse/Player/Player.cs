@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     const int MAX_BODY_PARTS = 15;
     const float maxAngleR = -45f;
     const float maxAngleL = 45f;
-
+    int x;
     public bool debugMode;
     
     
@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         {
             //AddBodyPart(sprite);
         }
+    //   PlayerPrefs.SetInt("firsttime", 0);
 
         //StartCoroutine("RevEngine");
         //StartCoroutine("FillBuffer");
@@ -68,12 +69,7 @@ public class Player : MonoBehaviour
         {
             
             //(holdhold());
-            if (PlayerPrefs.GetInt("firsttime") == 0)
-            {
-                StartCoroutine(holdhold());
-                PlayerPrefs.SetInt("firsttime", 1);
-
-            }
+            
             Move();
         }
 
@@ -151,11 +147,19 @@ public class Player : MonoBehaviour
         Transformation tranformation = new Transformation(BodyParts[BodyParts.Count - 1].rotation,
                                                             BodyParts[BodyParts.Count - 1].position,
                                                             BodyParts[BodyParts.Count - 1].up);
+        if (x == 0)
+        {
+            x++;
+            partClass.Setup(BodyParts.Count - 1, tranformation, BodyParts[BodyParts.Count - 1], 0.8f);
+        }
+        else
+        {
+            partClass.Setup(BodyParts.Count - 1, tranformation, BodyParts[BodyParts.Count - 1], 0.4f);
 
-        partClass.Setup(BodyParts.Count -1, tranformation, BodyParts[BodyParts.Count - 1]);
-
+        }
         newPart.SetParent(transform);
         BodyParts.Add(newPart);
+     
     }
 
     IEnumerator RevEngine()
@@ -194,10 +198,10 @@ public class Player : MonoBehaviour
     public float GetCurrentSpeed() {
         return curSpd;
     }
-  IEnumerator holdhold()
-    {
-        hold_left.SetActive(true)   ;
-        yield return new WaitForSeconds(2f);
-        hold_left.SetActive(false);
-    }
+  //IEnumerator holdhold()
+  //  {
+  //      hold_left.SetActive(true)   ;
+  //      yield return new WaitForSeconds(2f);
+  //      hold_left.SetActive(false);
+  //  }
 }

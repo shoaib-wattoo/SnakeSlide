@@ -199,31 +199,52 @@ public class GM : MonoBehaviour
         //gems = data.gems;
         SoundManager._instance.audioPreferences = data.audioPreferences;
     }
+    public static bool newRestart;
     IEnumerator delayStart()
     {
        // PlayerPrefs.SetInt("mode", 0);
         yield return new WaitForSeconds(0.01f);
       //  if (PlayerPrefs.GetInt("mode") == 2) 
-      if(mode.selectedMod==2)
-        {
-           
-            arcadeMode[0].SetActive(true);
-            arcadeMode[1].SetActive(true);
-            arcadeMode[2].SetActive(false);
-            arcadeMode[3].GetComponent<Animator>().SetTrigger("Appear");
-            Player._instance.StartGame();
-
-
-        }
+     
        // else if (PlayerPrefs.GetInt("mode") == 1)
-       else if(mode.selectedMod==1)
+        if(mode.selectedMod==1)
         {
             Storymode[0].SetActive(true);
             Storymode[1].SetActive(true);
             Storymode[2].SetActive(false);
             Storymode[3].SetActive(false);
-           
+           if(newRestart)
+            {
+                Storymode[1].SetActive(false);
+                Storymode[4].SetActive(true);
+                arcadeMode[1].SetActive(true);
+                Player._instance.StartGame();
+
+            }
         }
+        else
+        {
+            if (PlayerPrefs.GetInt("firsttime") == 1)
+            {
+
+                arcadeMode[0].SetActive(true);
+                arcadeMode[1].SetActive(true);
+                arcadeMode[2].SetActive(false);
+                arcadeMode[3].GetComponent<Animator>().SetTrigger("Appear");
+                Player._instance.StartGame();
+            }
+           
+
+
+
+
+        }
+
+
+
+        yield return new WaitForSeconds(2f);
+        
+
     }
     #endregion
 }

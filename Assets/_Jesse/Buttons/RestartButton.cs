@@ -14,8 +14,8 @@ public class RestartButton : MonoBehaviour, IButtonAction
     }
     public void Execute()
     {
-      //  ExecuteEvents.Execute(plusBtn.gameObject, newBaseEventData(__yourEventSystem__), ExecuteEvents.submitHandler);
-      
+        //  ExecuteEvents.Execute(plusBtn.gameObject, newBaseEventData(__yourEventSystem__), ExecuteEvents.submitHandler);
+        GM.newRestart = true;
         gameManager.Restart();
     }
     public void home()

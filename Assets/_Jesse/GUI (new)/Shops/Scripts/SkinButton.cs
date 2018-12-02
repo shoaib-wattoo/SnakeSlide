@@ -12,6 +12,7 @@ public class SkinButton : MonoBehaviour {
     public string type;
 
     private void Start() {
+      
         priceText.text = price.ToString();
         switch (PlayerPrefs.GetInt(skinKey + type)) {
             case 0: // not purchased
@@ -20,6 +21,7 @@ public class SkinButton : MonoBehaviour {
             case 1: // purchased
 
                 ChangeToToggle();
+              //  PlayerPrefs.SetInt(skinKey + type,0);
                 break;
         }
     }
