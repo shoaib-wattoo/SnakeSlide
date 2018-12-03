@@ -8,11 +8,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
+
 public class GM : MonoBehaviour
 {
     public GameObject []arcadeMode;
     public GameObject[] Storymode;
     #region STATES
+    public GameObject adbanner_Prefab;
+    static bool isbannerAdded = false;
+    AdBanner adBanner;
+
     public enum GAMESTATE
     {
         LOAD,
@@ -39,10 +44,13 @@ public class GM : MonoBehaviour
                     break;
 
                 case GAMESTATE.LOSE:
+                    adBanner.CreateInterstitial();
+                    adBanner.ShowInterstital();
                     deathEvent.Invoke();
                     SoundManager._instance.PlayMusic(false);
                     SoundManager._instance.PlayDieSound();
                     Gamestate = GAMESTATE.GAMEOVER;
+                    //  adBanner.CreateInterstitial();
                     break;
 
                 case GAMESTATE.GAMEOVER:
@@ -90,6 +98,10 @@ public class GM : MonoBehaviour
     //-------
     void Awake()
     {
+      
+       
+
+
         if (_instance == null)
         {
             _instance = this;
@@ -101,8 +113,14 @@ public class GM : MonoBehaviour
 
     void Start()
     {
+
         StartCoroutine(delayStart());
         Gamestate = GAMESTATE.LOAD;
+        Debug.Log("Start");
+        if (!isbannerAdded)
+            Instantiate(adbanner_Prefab);
+        isbannerAdded = true;
+        adBanner = GameObject.Find("Scriptmanager(Clone)").GetComponent<AdBanner>();
     }
 
 
