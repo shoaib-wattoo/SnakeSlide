@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9140d9b26be84b94691b97a2e97354fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followingSpeed: 0.5
+  followingSpeed: 0.1
   framesPerRetrieval: 15
   separation: 0.4
   positionAlignSpeed: 7.92

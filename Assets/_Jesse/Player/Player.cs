@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         if (x == 0)
         {
             x++;
-            partClass.Setup(BodyParts.Count - 1, tranformation, BodyParts[BodyParts.Count - 1], 0.8f);
+            partClass.Setup(BodyParts.Count - 1, tranformation, BodyParts[BodyParts.Count - 1], 1f);
         }
         else
         {

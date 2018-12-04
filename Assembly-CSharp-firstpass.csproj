@@ -322,16 +322,16 @@
      <None Include="Assets\Standard Assets\VoxelBusters\NativePlugins\ReleaseNotes.txt" />
      <None Include="Assets\Plugins\Android\native_plugins_lib\res\xml\nativeplugins_file_paths.xml" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

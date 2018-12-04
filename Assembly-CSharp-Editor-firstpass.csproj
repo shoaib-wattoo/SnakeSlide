@@ -96,16 +96,16 @@
      <Compile Include="Assets\Standard Assets\VoxelBusters\NativePlugins\Scripts\Settings\Application\Editor\AddonServicesDrawer.cs" />
      <Compile Include="Assets\Standard Assets\VoxelBusters\NativePlugins\Scripts\Settings\Application\Editor\MultiComponentFeatureDrawer.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -354,16 +354,16 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl">
- <HintPath>C:/Users/Moaaz/Downloads/Compressed/SnakeSlideUpwork-master (1) copy/SnakeSlideUpwork-master/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl.dll</HintPath>
+ <HintPath>C:/Users/Moaaz/Documents/GitHub/SnakeSlide/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Moaaz/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
