@@ -39,13 +39,15 @@ public class GM : MonoBehaviour
                 case GAMESTATE.LOAD:
                     Load();
                     Gamestate = GAMESTATE.PLAY;
-                    admanager.instance.LoadIntersTitialAd();
-                    admanager.instance.LoadVideoAd();
+                    
                     break;
 
                 case GAMESTATE.LOSE:
-                  
-                    admanager.instance.showInterstitialAd();
+
+                    if (PlayerPrefs.GetInt("noads") == 0)
+                    {
+                        admanager.instance.showInterstitialAd();
+                    }
                     deathEvent.Invoke();
                     SoundManager._instance.PlayMusic(false);
                     SoundManager._instance.PlayDieSound();
@@ -256,9 +258,11 @@ public class GM : MonoBehaviour
         }
 
 
-
+        admanager.instance.LoadIntersTitialAd();
+        admanager.instance.LoadVideoAd();
         yield return new WaitForSeconds(2f);
-        
+       
+
 
     }
     #endregion

@@ -20,23 +20,26 @@ public class admanager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       // PlayerPrefs.DeleteAll();
         DontDestroyOnLoad(gameObject);
         instance = this;
         DontDestroyOnLoad(gameObject);
         LoadBannerAd();
       //  LoadIntersTitialAd();
      //   LoadVideoAd();
-        ShowBannerAd();
+      
       //  LoadIntersTitialAd();
    //     LoadVideoAd();
      //   ShowBannerAd();
         MyRewarVideoAd = RewardBasedVideoAd.Instance;
+        if (PlayerPrefs.GetInt("noads") == 0)
+        { ShowBannerAd(); }
 #if UNITY_ANDROID
         myInterstitialAd = new InterstitialAd(InterstitialAdID_Android);
       
 
 #elif UNITY_IPHONE
-          myInterstitialAd = new InterstitialAd(InterstitialAdID_Ios);
+        myInterstitialAd = new InterstitialAd(InterstitialAdID_Ios);
 #endif
 
 

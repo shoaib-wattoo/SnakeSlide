@@ -8,9 +8,10 @@ public class SoundButton : MonoBehaviour, IButtonAction
     public Sprite sound, noSound;
     public Image button;
     string[] messages = new string[2] {"Sound ON", "Sound OFF"};
-
+    static bool x;
     void Start()
     {
+        x = true;
         //textDisplayed = GetComponentInChildren<Text>();
         StartCoroutine(LateStart());
     }
@@ -21,8 +22,14 @@ public class SoundButton : MonoBehaviour, IButtonAction
     }
 
     public void Execute()
-    {
+    {if (x == true)
+        {
+            x = false;
+        }
+        else
+            x = true;
         SoundManager._instance.ToggleAudio();
+        MusicController.instance.PlayMusic(x);
         UpdateButtonDisplay();
     }
 
@@ -36,6 +43,7 @@ public class SoundButton : MonoBehaviour, IButtonAction
         else
         {
             button.sprite = noSound;
+
         }
     }
 }
