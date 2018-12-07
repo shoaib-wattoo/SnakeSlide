@@ -29,7 +29,7 @@ isProcessing = true;
 // wait for graphics to render
 yield return new WaitForEndOfFrame();
 string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
-Application.CaptureScreenshot(ScreenshotName);
+ScreenCapture.CaptureScreenshot(ScreenshotName);
 yield return new WaitForSeconds(1f);
 if(!Application.isEditor)
 {

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6E2FF883-77D6-3354-DAE2-40CA7F3D9189}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeSlide", "Assembly-CSharp.csproj", "{6E2FF883-77D6-3354-DAE2-40CA7F3D9189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{AB227A20-2B60-CE25-6B15-F1EAD282BE34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeSlide", "Assembly-CSharp-firstpass.csproj", "{AB227A20-2B60-CE25-6B15-F1EAD282BE34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{C0B43C3C-13B8-C6B4-ED49-C828E75F629D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeSlide", "Assembly-CSharp-Editor.csproj", "{C0B43C3C-13B8-C6B4-ED49-C828E75F629D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{99CE3D66-A7ED-E2E8-CD20-399C7468634C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeSlide", "Assembly-CSharp-Editor-firstpass.csproj", "{99CE3D66-A7ED-E2E8-CD20-399C7468634C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
