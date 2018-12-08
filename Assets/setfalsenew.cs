@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class setfalsenew : MonoBehaviour {
 
+	public static setfalsenew instance;
+
+	void Awake(){
+		instance = this;
+	}
+
 	// Use this for initialization
 	void Start () {
-        if (PlayerPrefs.GetInt("firsttime") == 0)
-        { StartCoroutine(delay()); }
+        if (PlayerPrefs.GetInt("firsttime") != 0)
+		{
+			this.gameObject.SetActive(false);
+		}
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    IEnumerator delay()
-    {
-        yield return new WaitForSeconds(1f);
-        this.gameObject.SetActive(false);
-        PlayerPrefs.SetInt("firsttime", 1);
 
-    }
+	public void HideTutorial(){
+		Debug.Log ("Hide Tut");
+		if (PlayerPrefs.GetInt ("firsttime") == 0) {
+			PlayerPrefs.SetInt ("firsttime", 1);
+			this.gameObject.SetActive (false);
+		}
+	}
 }

@@ -39,7 +39,8 @@ public class GM : MonoBehaviour
                 case GAMESTATE.LOAD:
                     Load();
                     Gamestate = GAMESTATE.PLAY;
-                    
+					tutObj.SetActive (false);
+
                     break;
 
                 case GAMESTATE.LOSE:
@@ -96,14 +97,11 @@ public class GM : MonoBehaviour
     int points = 0;
     int gems = 0;
 
+	public GameObject tutObj;
 
     //-------
     void Awake()
     {
-      
-       
-
-
         if (_instance == null)
         {
             _instance = this;
@@ -122,6 +120,13 @@ public class GM : MonoBehaviour
   
     }
 
+	public void HideTutorial(){
+		Debug.Log ("Hide Tut");
+		if (PlayerPrefs.GetInt ("firsttime") == 0) {
+			PlayerPrefs.SetInt ("firsttime", 1);
+			tutObj.SetActive (false);
+		}
+	}
 
     #region scoreHandling
     public void PointsUp()
@@ -134,6 +139,9 @@ public class GM : MonoBehaviour
         }
 
         scoreText.text = points.ToString();
+
+		HideTutorial ();
+
     }
 
     public void GemsUp()
@@ -154,10 +162,17 @@ public class GM : MonoBehaviour
     
     public void StartGame() {
         //gemsUiText.text = gems.ToString();
+		Debug.Log("Delay Start");
+		if (PlayerPrefs.GetInt ("firsttime") == 0) {
+			tutObj.SetActive (true);
+		} else {
+			tutObj.SetActive (false);
+		}
     }
 
     public void DisplayGameOver()
     {
+		tutObj.SetActive (false);
         InGameCanvas.SetActive(false);
         //GameOverCanvas.SetActive(true);
         scoreEndText.text = "Score: " + points.ToString();
@@ -222,7 +237,8 @@ public class GM : MonoBehaviour
        // PlayerPrefs.SetInt("mode", 0);
         yield return new WaitForSeconds(0.01f);
       //  if (PlayerPrefs.GetInt("mode") == 2) 
-     
+
+
        // else if (PlayerPrefs.GetInt("mode") == 1)
         if(mode.selectedMod==1)
         {
