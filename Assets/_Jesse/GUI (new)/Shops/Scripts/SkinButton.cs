@@ -27,8 +27,10 @@ public class SkinButton : MonoBehaviour {
     }
 
     public void Pressed() {
-        if (PlayerPrefs.GetInt("Gems") >= price)
-            Purchase();
+		if (PlayerPrefs.GetInt ("Gems") >= price)
+			Purchase ();
+		else
+			OpenGemsPanel ();
     }
 
     private void ChangeToToggle() {
@@ -42,4 +44,8 @@ public class SkinButton : MonoBehaviour {
         PlayerPrefs.SetInt(skinKey + type, 1);
         gc.Refresh(price);
     }
+
+	private void OpenGemsPanel(){
+		GameObject.Find ("GameManager").GetComponent<GM>().OpenGemsPanel();
+	}
 }

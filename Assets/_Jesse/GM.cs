@@ -13,6 +13,10 @@ public class GM : MonoBehaviour
 {
     public GameObject []arcadeMode;
     public GameObject[] Storymode;
+	public GameObject shopBackground;
+	public GameObject shopGirls;
+	public GameObject shopCars;
+	public GameObject shopGems;
     #region STATES
 
 
@@ -98,6 +102,7 @@ public class GM : MonoBehaviour
     int gems = 0;
 
 	public GameObject tutObj;
+	public bool deletePrefs = false;
 
     //-------
     void Awake()
@@ -119,6 +124,20 @@ public class GM : MonoBehaviour
         Debug.Log("Start");
   
     }
+
+	void Update(){
+		if(deletePrefs){
+			PlayerPrefs.DeleteAll();
+			deletePrefs = false;
+		}
+	}
+
+	public void OpenGemsPanel(){
+		shopCars.SetActive (false);
+		shopGirls.SetActive (false);
+		shopBackground.SetActive (false);
+		shopGems.SetActive (true);
+	}
 
 	public void HideTutorial(){
 		Debug.Log ("Hide Tut");
