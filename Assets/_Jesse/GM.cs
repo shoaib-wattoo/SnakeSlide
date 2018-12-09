@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-
 public class GM : MonoBehaviour
 {
     public GameObject []arcadeMode;
@@ -145,6 +144,14 @@ public class GM : MonoBehaviour
 			PlayerPrefs.SetInt ("firsttime", 1);
 			tutObj.SetActive (false);
 		}
+	}
+
+	public void SelectRandomShopItem(){
+		SkinGroup[] skinButtons = GameObject.FindObjectsOfType<SkinGroup> ();
+		SkinGroup sButton = skinButtons[UnityEngine.Random.Range(0,skinButtons.Length-1)];
+		sButton.ClickedOnRemotely ();
+		Debug.Log ("Length :: " + skinButtons.Length);
+
 	}
 
     #region scoreHandling

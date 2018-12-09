@@ -17,6 +17,15 @@ public class admanager : MonoBehaviour
     InterstitialAd myInterstitialAd;
     RewardBasedVideoAd MyRewarVideoAd;
     BannerView MyBannerView;
+
+	public bool isProUser = false;
+
+	void Awake(){
+		if (PlayerPrefs.GetInt ("noads", 0) == 1) {
+			isProUser = true;
+		}
+	}
+
     // Use this for initialization
     void Start()
     {
@@ -46,11 +55,17 @@ public class admanager : MonoBehaviour
     }
     public void LoadIntersTitialAd()
     {
+		if (isProUser)
+			return;
+		
         AdRequest request = new AdRequest.Builder().Build();
         myInterstitialAd.LoadAd(request);
     }
     public void showInterstitialAd()
     {
+		if (isProUser)
+			return;
+		
         if (myInterstitialAd.IsLoaded())
         {
             myInterstitialAd.Show();
@@ -63,6 +78,9 @@ public class admanager : MonoBehaviour
     }
     public void LoadVideoAd()
     {
+		if (isProUser)
+			return;
+
         if(!myInterstitialAd.IsLoaded())
         {
             AdRequest request = new AdRequest.Builder().Build();
@@ -76,6 +94,9 @@ public class admanager : MonoBehaviour
     }
     public  void ShowVideoAd()
     {
+		if (isProUser)
+			return;
+		
         if(MyRewarVideoAd.IsLoaded())
         {
             MyRewarVideoAd.Show();
@@ -90,6 +111,9 @@ public class admanager : MonoBehaviour
     }
     void LoadBannerAd()
     {
+		if (isProUser)
+			return;
+		
 #if UNITY_ANDROID
         this.MyBannerView = new BannerView(banner_Android, AdSize.Banner, AdPosition.Top);
 #elif UNITY_IPHONE
@@ -100,6 +124,9 @@ public class admanager : MonoBehaviour
     }
     public void ShowBannerAd()
     {
+		if (isProUser)
+			return;
+		
         this.MyBannerView.Show();
     }
     public void HideBannerAd()

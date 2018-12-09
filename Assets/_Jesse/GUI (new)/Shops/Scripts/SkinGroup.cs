@@ -28,4 +28,11 @@ public class SkinGroup : MonoBehaviour {
         if (psc != null) psc.Refresh();
         else if (wss != null) wss.Refresh();
     }
+
+	public void ClickedOnRemotely() {
+		PlayerPrefs.SetInt("CurrentSkin" + type, skinInt);
+		if (psc != null) psc.Refresh();
+		else if (wss != null) wss.Refresh();
+		ToggleEnable ();
+	}
 }

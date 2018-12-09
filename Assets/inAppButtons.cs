@@ -16,22 +16,22 @@ public class inAppButtons : MonoBehaviour {
     public void fourHundred()
     {
         IAPManager.Instance.Buy50Gold();
-        IAPManager.Instance.BuyNoAds();
+        //IAPManager.Instance.BuyNoAds();
     }
     public void Thousand()
     {
         IAPManager.Instance.Buy100Gold();
-        IAPManager.Instance.BuyNoAds();
+        //IAPManager.Instance.BuyNoAds();
     }
     public void thirtytwothousand()
     {
         IAPManager.Instance.Buy200Gold();
-        IAPManager.Instance.BuyNoAds();
+        //IAPManager.Instance.BuyNoAds();
     }
     public void seventyTwoThousand()
     {
         IAPManager.Instance.Buy400Gold();
-        IAPManager.Instance.BuyNoAds();
+        //IAPManager.Instance.BuyNoAds();
     }
     public void NoADDS()
     {

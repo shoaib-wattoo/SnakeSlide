@@ -221,6 +221,7 @@ using UnityEngine.UI;
                 Debug.Log(string.Format("ProcessPurchase: PASS. 50 Gems Product: '{0}'", args.purchasedProduct.definition.id));
             PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + 400);
             GameObject.FindGameObjectWithTag("score").GetComponent<Text>().text = PlayerPrefs.GetInt("Gems").ToString();
+			PlayerPrefs.SetInt ("noads", 1);
             // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
             //ScoreManager.score += 100;
         }
@@ -230,7 +231,8 @@ using UnityEngine.UI;
                 Debug.Log(string.Format("ProcessPurchase: PASS. 100 Gems Product: '{0}'", args.purchasedProduct.definition.id));
             PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + 1000);
             GameObject.FindGameObjectWithTag("score").GetComponent<Text>().text = PlayerPrefs.GetInt("Gems").ToString();
-            // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
+			PlayerPrefs.SetInt("noads", 1);
+			// TODO: The non-consumable item has been successfully purchased, grant this item to the player.
         }
             // Or ... a subscription product has been purchased by this user.
 		else if (String.Equals(args.purchasedProduct.definition.id, PRODUCT_ID_200_GEMS, StringComparison.Ordinal))
@@ -238,7 +240,8 @@ using UnityEngine.UI;
                 Debug.Log(string.Format("ProcessPurchase: PASS.200 Gems  Product: '{0}'", args.purchasedProduct.definition.id));
             PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + 3200);
             GameObject.FindGameObjectWithTag("score").GetComponent<Text>().text = PlayerPrefs.GetInt("Gems").ToString();
-            // TODO: The subscription item has been successfully purchased, grant this to the player.
+			PlayerPrefs.SetInt("noads", 1);
+			// TODO: The subscription item has been successfully purchased, grant this to the player.
         }
 
 		else if (String.Equals(args.purchasedProduct.definition.id, PRODUCT_ID_400_GEMS, StringComparison.Ordinal))
@@ -246,7 +249,8 @@ using UnityEngine.UI;
 			Debug.Log(string.Format("ProcessPurchase: PASS.400 Gems Product: '{0}'", args.purchasedProduct.definition.id));
             PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + 7200);
             GameObject.FindGameObjectWithTag("score").GetComponent<Text>().text = PlayerPrefs.GetInt("Gems").ToString();
-            // TODO: The subscription item has been successfully purchased, grant this to the player.
+			PlayerPrefs.SetInt("noads", 1);
+			// TODO: The subscription item has been successfully purchased, grant this to the player.
         }
 
 		else if (String.Equals(args.purchasedProduct.definition.id, PRODUCT_ID_NO_ADS, StringComparison.Ordinal))
