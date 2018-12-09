@@ -54,5 +54,6 @@ MonoBehaviour:
   itemImage:
   - {fileID: 21300000, guid: aa5d54c66f71b684485583db3c48dd51, type: 3}
   amountToCollect: 00000000
-  levelDiscription: The kids are hugry, and we've run out of food! Collect 10 Slises
-    to progress to the next level...
+  levelDiscription: "Collect basketballs for Wyatt\u2019s team. I GOT ROPED INTO COACHING
+    MY SON'S BASKETBALL TEAM. HOPEFULLY THIS SEASON IS A REAL SLAM DUNK. GET IT? SLAM
+    D...NEVERMIND."

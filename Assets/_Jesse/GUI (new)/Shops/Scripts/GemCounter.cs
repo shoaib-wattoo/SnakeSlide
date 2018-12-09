@@ -8,7 +8,7 @@ public class GemCounter : MonoBehaviour {
     private Text text;
     private Animator anim;
 
-    void Start() {
+    void OnEnable() {
         text = GetComponent<Text>();
         anim = GetComponent<Animator>();
         text.text = PlayerPrefs.GetInt("Gems").ToString();

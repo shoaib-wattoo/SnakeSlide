@@ -22,10 +22,10 @@ using UnityEngine.UI;
         // when defining the Product Identifiers on the store. Except, for illustration purposes, the 
         // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
         // specific mapping to Unity Purchasing's AddProduct, below.
-        public static string PRODUCT_ID_50_GEMS =    "gems50";   
-        public static string PRODUCT_ID_100_GEMS = "gems100";
-        public static string PRODUCT_ID_200_GEMS =  "gems200"; 
-	    public static string PRODUCT_ID_400_GEMS =  "gems400";
+	public static string PRODUCT_ID_50_GEMS =    "fourhundred";   
+	public static string PRODUCT_ID_100_GEMS = "onethousand";
+	public static string PRODUCT_ID_200_GEMS =  "threethousandtwohundredgems"; 
+	public static string PRODUCT_ID_400_GEMS =  "seventhousandtwohundredgems";
 	    public static string PRODUCT_ID_NO_ADS =  "noads";
          
         // Apple App Store-specific product identifier for the subscription product.
@@ -35,14 +35,16 @@ using UnityEngine.UI;
         //private static string kProductNameGooglePlaySubscription =  "com.unity3d.subscription.original"; 
         
        private void Start()
-        {
-        Instance = this;
+       {
+       		Instance = this;
             // If we haven't set up the Unity Purchasing reference
-            if (m_StoreController == null)
-            {
+            //if (m_StoreController == null)
+            //{
                 // Begin to configure our connection to Purchasing
-                InitializePurchasing();
-            }
+            //    InitializePurchasing();
+            //}
+			InitializePurchasing();
+
         }
         
         public void InitializePurchasing() 

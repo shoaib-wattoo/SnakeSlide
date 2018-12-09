@@ -55,5 +55,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c600c9dcae0d4ee4180890c271a74b46, type: 3}
   - {fileID: 21300000, guid: af3e71e06f4c2e04fa41c30f850912f6, type: 3}
   amountToCollect: 0800000002000000
-  levelDiscription: Kids are hugry, and we've run out of food and water! Collect 8
-    Slices and 2 Water Cups to progress to the next level...
+  levelDiscription: "Jason collecting bagels for the kids and their breakfast. GOTTA
+    GET MY KIDS BREAKFAST! COLLECT 5 BAGELS FOR THEM. DON\u2019T FORGET THE CREAM
+    CHEESE!"

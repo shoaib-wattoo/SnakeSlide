@@ -56,5 +56,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   amountToCollect: 000000000000000000000000
-  levelDiscription: The kids are hugry, and we've run out of food! Collect 10 Slises
-    to progress to the next level...
+  levelDiscription: 'Jason collecting bagels for the kids and their breakfast. AND
+    THE KIDS NEED BREAKFAST ONCE AGAIN! HOW CAN THEY EAT SO MANY BAGELS?? '

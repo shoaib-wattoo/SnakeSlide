@@ -54,5 +54,7 @@ MonoBehaviour:
   itemImage:
   - {fileID: 21300000, guid: aa5d54c66f71b684485583db3c48dd51, type: 3}
   amountToCollect: 00000000
-  levelDiscription: The kids are hugry, and we've run out of food! Collect 10 Slises
-    to progress to the next level...
+  levelDiscription: "Pick up tickets, microphones, stage lights, anything they would
+    need for their stage show. (New York, they could WE\u2019VE GOT A BIG SHOW COMING
+    UP! PEOPLE SAY I\u2019M \_SECOND FIDDLE FOR DAVID. AND I SAY... THEY\u2019RE NOT
+    WRONG. COLLECT OUR LIVE SHOW EQUIPMENT. "

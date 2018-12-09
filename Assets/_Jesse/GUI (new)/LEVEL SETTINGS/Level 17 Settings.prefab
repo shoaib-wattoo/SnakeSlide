@@ -54,5 +54,7 @@ MonoBehaviour:
   itemImage:
   - {fileID: 21300000, guid: aa5d54c66f71b684485583db3c48dd51, type: 3}
   amountToCollect: 00000000
-  levelDiscription: The kids are hugry, and we've run out of food! Collect 10 Slises
-    to progress to the next level...
+  levelDiscription: "David sends Jason around town to pick up random items for him
+    like paintballs, flamethrower fuel, and duct tape. NOT SURE WHAT DAVID\u2019S
+    UP TO, BUT I HOPE I DON\u2019T END UP AT THE HOSPITAL AGAIN. COLLECT FLAMETHROWER
+    FUEL FOR DAVID."
